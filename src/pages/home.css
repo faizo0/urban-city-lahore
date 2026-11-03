@@ -1,0 +1,17 @@
+.feature-card {
+  flex: 1 1 380px;
+  max-width: 378px;
+  background-color: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  /* Yahan shadow ko halka (kam) kar diya gaya hai */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Jab mouse card par layenge toh card opar ki taraf move hoga */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}

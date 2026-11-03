@@ -1,0 +1,229 @@
+/* Page Overall Wrapper */
+.contact-page {
+  width: 100%;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Header Banner Styling */
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 3px solid #d4af37;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.banner-content p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  color: #e2e8f0;
+}
+
+/* Main Content Grid */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
+}
+
+/* Form Container */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-top: 5px solid #d4af37;
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  border-right: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.form h2 {
+  font-size: 1.7rem;
+  color: #111111;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+/* 🌟 VIP Golden Gradient Capsule Button */
+.form .btn-gold {
+  width: 100%;
+  background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
+  color: #111111;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form .btn-gold:hover {
+  background: linear-gradient(135deg, #f1c40f 0%, #e67e22 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.65);
+  color: #111111;
+}
+
+.ok {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Office Info Section */
+.offices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offices h2 {
+  font-size: 1.7rem;
+  color: #111111;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* Modern Info Cards */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #d4af37;
+  border-top: 1px solid #f1f5f9;
+  border-right: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  background: rgba(212, 175, 55, 0.12);
+  padding: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.card-text h3 {
+  font-size: 1.25rem;
+  color: #111111;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.card-text p {
+  color: #555555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-text .phone-num {
+  font-weight: 700;
+  color: #111111;
+  margin-top: 6px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 820px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-content h1 {
+    font-size: 2.2rem;
+  }
+}

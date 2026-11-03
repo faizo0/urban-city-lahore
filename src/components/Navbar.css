@@ -1,0 +1,198 @@
+/* نیبار کا مین کنٹینر جو ہیرو سیکشن کے اوپر فلوٹ کرے گا */
+.navbar-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  font-family: sans-serif;
+}
+
+/* آپ کے پسندیدہ پریمیم گول اور ٹرانسپیرنٹ باکس کی اسٹائلنگ */
+.navbar-box {
+  width: 100%;
+  max-width: 1320px; /* وڈتھ کو تھوڑا سا مزید پھیلا دیا گیا ہے */
+  background: rgba(255, 255, 255, 0.92); /* ہلکا سا ٹرانسپیرنٹ گلاس ایفیکٹ */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 40px; /* وہی پرانی خوبصورت گولائی */
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* لوگو اسٹائل */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text strong {
+  font-size: 1rem;
+  color: #0f172a;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+.logo-text em {
+  font-size: 0.75rem;
+  color: #c9a45c;
+  font-style: normal;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+/* مینو لنکس */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c9a45c;
+}
+
+/* دائیں طرف کے بٹنز کا ایریا */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* نیا کانٹیکٹ اس بٹن (ٹرانسپیرنٹ اور پریمیم بارڈر کے ساتھ) */
+.contact-nav-btn {
+  padding: 9px 18px;
+  background-color: transparent;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-nav-btn:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* پرانا بک ناؤ گولڈن بٹन */
+.cta-btn {
+  padding: 10px 22px;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background-color: #c9a45c;
+  color: #111111;
+  transform: translateY(-1px);
+}
+
+/* موبائل برگر آئیکن */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.burger span {
+  width: 100%;
+  height: 2.5px;
+  background-color: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* رسپانسو موبائل ویو */
+@media (max-width: 900px) {
+  .navbar-container {
+    padding: 0 10px;
+    top: 10px;
+  }
+
+  .navbar-box {
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 30px 30px 30px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .burger.is-open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.is-open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

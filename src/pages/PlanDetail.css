@@ -1,0 +1,303 @@
+.plan-detail-wrapper {
+  width: 100%;
+  background-color: #f7f8fa;
+  padding-bottom: 60px;
+}
+
+.detail-hero-banner {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-hero-banner .banner-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  display: inline-block;
+  color: #d4af37;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #ffffff;
+}
+
+.detail-hero-banner h1 {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.detail-hero-banner .subtitle {
+  color: #dddddd;
+  font-size: 1.2rem;
+}
+
+.detail-hero-banner .subtitle strong {
+  color: #d4af37;
+}
+
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.plan-toggle-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #d4af37;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.plan-toggle-box h3 {
+  margin: 0;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+.detail-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-top: 4px solid #111;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+.detail-card h2 {
+  font-size: 1.5rem;
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.total-badge {
+  background: #111;
+  color: #d4af37;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.vip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vip-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eeeeee;
+  color: #333333;
+  font-size: 0.98rem;
+}
+
+.vip-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+.gold-text {
+  color: #b89320 !important;
+}
+
+.section-desc {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.map-wrapper {
+  width: 100%;
+  border: 2px solid #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.vip-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vip-features-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #ddd;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gold-check {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.sidebar-info {
+  position: sticky;
+  top: 90px;
+  height: fit-content;
+}
+
+.booking-card {
+  background: #111111;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border-top: 4px solid #d4af37;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.booking-card h3 {
+  color: #d4af37;
+  margin-top: 0;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.form-subtext {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.vip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vip-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vip-form label {
+  font-size: 0.85rem;
+  color: #ddd;
+  font-weight: 500;
+}
+
+.vip-form input, .vip-form textarea {
+  padding: 12px 14px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.vip-form input:focus, .vip-form textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.readonly-input {
+  background: #1a1a1a !important;
+  color: #d4af37 !important;
+  font-weight: bold;
+}
+
+/* 👈 Yahan button ko bilkul waisa hi capsule shape aur gold style de diya gaya hai jaisa aapki image mein hai */
+.btn-gold-submit {
+  width: 100%;
+  padding: 14px;
+  background: #d4af37;
+  color: #111111;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px; /* Capsule rounded style */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+  margin-top: 10px;
+}
+
+.btn-gold-submit:hover {
+  background: #f1c40f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+}
+
+.success-box {
+  background: #1c2b1e;
+  border: 1px solid #27ae60;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 2.5rem;
+}
+
+.success-box h4 {
+  color: #2ecc71;
+  margin: 10px 0 5px 0;
+}
+
+.success-box p {
+  color: #ddd;
+  font-size: 0.9rem;
+}

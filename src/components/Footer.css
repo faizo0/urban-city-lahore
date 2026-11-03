@@ -1,0 +1,9 @@
+.footer { background: #000; color: #bdbdbd; padding: 56px 20px 0; border-top: 1px solid #222; }
+.footer-grid { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.2fr; gap: 40px; }
+.footer .about { margin-top: 18px; font-size: .92rem; max-width: 42ch; }
+.footer h4 { font: 600 1.25rem var(--serif); color: var(--gold); margin-bottom: 14px; }
+.footer li { margin-bottom: 8px; font-size: .92rem; }
+.footer li a { transition: color .25s, padding-left .25s; }
+.footer li a:hover { color: var(--gold); padding-left: 6px; }
+.copy { text-align: center; font-size: .82rem; margin-top: 44px; padding: 20px 0; border-top: 1px solid #1c1c1c; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; gap: 30px; } }

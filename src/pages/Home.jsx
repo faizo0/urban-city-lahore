@@ -65,8 +65,13 @@ export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleCardClick = (f) => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Page foran smooth tareeqe se upar jayega
-    setActiveModal(f);
+    // Sabse pehle window ko bilkul top par instant bhej denge taake scroll ka koi issue na ho
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    
+    // Phir foran popup active kar denge
+    requestAnimationFrame(() => {
+      setActiveModal(f);
+    });
   };
 
   const handleImageError = (e) => {

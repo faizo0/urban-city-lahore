@@ -65,8 +65,8 @@ export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleCardClick = (f) => {
+    window.scrollTo(0, 0); // فوراً ٹاپ پر لے جائے گا بغیر کسی ڈیلے کے
     setActiveModal(f);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // کارڈ کلک ہوتے ہی پیج اوپر سکول ہو جائے گا
   };
 
   const handleImageError = (e) => {

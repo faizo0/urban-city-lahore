@@ -65,6 +65,7 @@ export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleCardClick = (f) => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Page foran smooth tareeqe se upar jayega
     setActiveModal(f);
   };
 

@@ -242,7 +242,7 @@
   transition: all 0.3s ease;
 }
 
-/* Popup Modal Styling (Responsive & Centered) */
+/* Popup Modal Styling */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -340,7 +340,7 @@
 
 
 /* ===========================
-   Mobile & Tablet Responsive Media Queries
+   Mobile Responsive Fix
    =========================== */
 @media (max-width: 768px) {
   .features-grid {
@@ -353,29 +353,28 @@
   }
 
   .modal-overlay {
-    padding: 12px !important;
-    align-items: center !important;
+    padding: 8px !important;
   }
 
   .modal-box {
-    width: 92% !important;
-    max-width: 400px !important;
-    padding: 18px !important;
+    width: 90% !important;
+    max-width: 330px !important; /* Mobile par popup bilkul chhota aur fix rahega */
+    padding: 15px !important;
     max-height: 75vh !important;
     margin: auto !important;
   }
 
   .modal-img-box {
-    height: 150px !important;
+    height: 140px !important;
   }
 
   .modal-title {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .modal-text {
-    font-size: 0.88rem !important;
-    margin-bottom: 15px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 12px !important;
   }
 
   .home-cta-buttons {

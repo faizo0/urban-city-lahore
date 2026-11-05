@@ -1,10 +1,10 @@
-/* مین ہوم پیج کنٹینر */
+/* Main Home Container */
 .home-container {
   background-color: #f8fafc;
   min-height: 100vh;
 }
 
-/* VIP ہائی لائٹس / اسٹیٹس بار */
+/* VIP Highlights / Stats Bar */
 .stats-section {
   background-color: #0d0f12;
   border-top: 2px solid #d4af37;
@@ -38,7 +38,7 @@
   letter-spacing: 1px;
 }
 
-/* فیچرز سیکشن */
+/* Features Section */
 .features-section {
   padding: 70px 20px;
   font-family: sans-serif;
@@ -80,14 +80,14 @@
   margin: 0;
 }
 
-/* 6 فیچرز کا گریڈ */
+/* Features Grid */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
 }
 
-/* وائٹ کارڈز اسٹائل */
+/* White Cards Style */
 .feature-card {
   flex: 1 1 380px;
   max-width: 378px;
@@ -167,7 +167,7 @@
   gap: 6px;
 }
 
-/* نیچے والا کال ٹو ایکشن بینر */
+/* CTA Banner Section */
 .cta-banner-section {
   background-color: #0d0f12;
   background-image: linear-gradient(rgba(13, 15, 18, 0.8), rgba(13, 15, 18, 0.85)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80');
@@ -242,18 +242,19 @@
   transition: all 0.3s ease;
 }
 
-/* پاپ اپ (Modal) کی جدید اور بہترین رسپانسو سیٹنگز */
+/* Popup Modal Styling (Responsive & Centered) */
 .modal-overlay {
   position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100dvh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
-  padding: 15px;
+  z-index: 99999;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -261,25 +262,25 @@
   background-color: #111111;
   border: 2px solid #d4af37;
   border-radius: 16px;
-  max-width: 520px;
+  max-width: 480px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 80vh;
   overflow-y: auto;
-  padding: 25px;
+  padding: 22px;
   color: #ffffff;
   position: relative;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 12px;
-  right: 18px;
+  top: 10px;
+  right: 15px;
   background: transparent;
   border: none;
   color: #d4af37;
-  font-size: 2rem;
+  font-size: 1.8rem;
   cursor: pointer;
   font-weight: bold;
   line-height: 1;
@@ -287,15 +288,15 @@
 
 .modal-badge {
   color: #d4af37;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 .modal-title {
-  font-size: 1.8rem;
-  margin: 6px 0 14px 0;
+  font-size: 1.5rem;
+  margin: 5px 0 12px 0;
   color: #ffffff;
   font-weight: 800;
   padding-right: 25px;
@@ -303,8 +304,8 @@
 
 .modal-img-box {
   width: 100%;
-  height: 220px;
-  margin-bottom: 15px;
+  height: 180px;
+  margin-bottom: 12px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.3);
@@ -318,28 +319,28 @@
 
 .modal-text {
   color: #cbd5e1;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 25px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .modal-back-btn {
   width: 100%;
-  padding: 12px;
+  padding: 11px;
   border-radius: 25px;
   background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
   color: #111111;                 
   border: none;
   cursor: pointer;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
 
 /* ===========================
-   موبائل اور ٹیبلٹ رسپانسو میڈیا کوئریز
+   Mobile & Tablet Responsive Media Queries
    =========================== */
 @media (max-width: 768px) {
   .features-grid {
@@ -352,27 +353,29 @@
   }
 
   .modal-overlay {
-    padding: 10px !important;
+    padding: 12px !important;
+    align-items: center !important;
   }
 
   .modal-box {
-    width: 95% !important;
-    max-width: 95% !important;
+    width: 92% !important;
+    max-width: 400px !important;
     padding: 18px !important;
-    max-height: 80vh !important;
+    max-height: 75vh !important;
+    margin: auto !important;
   }
 
   .modal-img-box {
-    height: 160px !important;
+    height: 150px !important;
   }
 
   .modal-title {
-    font-size: 1.35rem !important;
+    font-size: 1.25rem !important;
   }
 
   .modal-text {
-    font-size: 0.9rem !important;
-    margin-bottom: 18px !important;
+    font-size: 0.88rem !important;
+    margin-bottom: 15px !important;
   }
 
   .home-cta-buttons {

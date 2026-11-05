@@ -1,3 +1,93 @@
+/* مین ہوم پیج کنٹینر */
+.home-container {
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* VIP ہائی لائٹس / اسٹیٹس بار */
+.stats-section {
+  background-color: #0d0f12;
+  border-top: 2px solid #d4af37;
+  border-bottom: 2px solid #d4af37;
+  padding: 35px 20px;
+  color: #ffffff;
+}
+
+.stats-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.4rem;
+  color: #d4af37;
+  margin: 0 0 5px 0;
+  font-weight: 800;
+}
+
+.stat-item p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* فیچرز سیکشن */
+.features-section {
+  padding: 70px 20px;
+  font-family: sans-serif;
+}
+
+.features-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.section-subtitle {
+  color: #d4af37;
+  fontWeight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin: 0 0 16px 0;
+  color: #0f172a;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.section-desc {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* 6 فیچرز کا گریڈ */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+/* آپ کی مطلوبہ فیچر کارڈ اسٹائلنگ */
 .feature-card {
   flex: 1 1 380px;
   max-width: 378px;
@@ -5,13 +95,290 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.3);
-  /* Yahan shadow ko halka (kam) kar diya gaya hai */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Jab mouse card par layenge toh card opar ki taraf move hoga */
 .feature-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+}
+
+.card-img-box {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  borderRadius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.card-description {
+  color: #94a3b8;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.card-link {
+  color: #d4af37;
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* نیچے والا کال ٹو ایکشن بینر */
+.cta-banner-section {
+  background-color: #0d0f12;
+  background-image: linear-gradient(rgba(13, 15, 18, 0.8), rgba(13, 15, 18, 0.85)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 2px solid #d4af37;
+  border-bottom: 4px solid #d4af37;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.cta-banner-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cta-subtitle {
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cta-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin: 0 0 15px 0;
+  color: #ffffff;
+}
+
+.cta-desc {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.home-cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-gold-fill {
+  background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
+  color: #111111;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #d4af37;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* پاپ اپ (Modal) کی اسٹائلنگ اور رسپانسو سیٹنگز */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  zIndex: 1000;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  background-color: #111111;
+  border: 2px solid #d4af37;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  padding: 35px;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.modal-badge {
+  color: #d4af37;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  margin: 8px 0 16px 0;
+  color: #ffffff;
+  font-weight: 800;
+  padding-right: 25px;
+}
+
+.modal-img-box {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.modal-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-text {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.modal-back-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f39c12 0%, #d4af37 100%);
+  color: #111111;                 
+  border: none;
+  cursor: pointer;
+  fontWeight: 700;
+  fontSize: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+
+/* ===========================
+   موبائل اور ٹیبلٹ رسپانسو میڈیا کوئریز
+   =========================== */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .feature-card {
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .modal-box {
+    padding: 20px !important;
+    max-height: 85vh !important;
+    width: 92% !important;
+  }
+
+  .modal-img-box {
+    height: 180px !important;
+  }
+
+  .modal-title {
+    font-size: 1.5rem !important;
+  }
+
+  .modal-text {
+    font-size: 0.95rem !important;
+    margin-bottom: 20px !important;
+  }
+
+  .home-cta-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .home-cta-buttons a {
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
 }

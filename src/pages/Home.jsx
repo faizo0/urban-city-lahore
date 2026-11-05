@@ -65,7 +65,6 @@ export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 
   const handleCardClick = (f) => {
-    window.scrollTo(0, 0); // فوراً ٹاپ پر لے جائے گا بغیر کسی ڈیلے کے
     setActiveModal(f);
   };
 

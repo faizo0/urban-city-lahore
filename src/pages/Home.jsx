@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import "./Home.css";
+import "./home.css";
 
 const features = [
   {

@@ -5,8 +5,37 @@ export default function About() {
   return (
     <div style={{ width: "100%", fontFamily: "Arial, sans-serif", backgroundColor: "#f8fafc", paddingBottom: "60px" }}>
       
+      {/* رسپانسو میڈیا کوئریز کے لیے ان لائن سٹائل ٹیگ */}
+      <style>
+        {`
+          @media (max-width: 900px) {
+            .vision-grid-responsive {
+              grid-template-columns: 1fr !important;
+              padding: 25px !important;
+            }
+            .about-hero-responsive {
+              padding: 80px 15px 60px 15px !important;
+            }
+            .about-title-responsive {
+              font-size: 2.2rem !important;
+            }
+          }
+          @media (max-width: 480px) {
+            .cta-buttons-responsive {
+              flex-direction: column !important;
+              width: 100% !important;
+            }
+            .cta-btn-responsive {
+              width: 100% !important;
+              text-align: center !important;
+              box-sizing: border-box !important;
+            }
+          }
+        `}
+      </style>
+
       {/* 1. Header Section with Background Banner Image */}
-      <div style={{
+      <div className="about-hero-responsive" style={{
         position: "relative",
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600')`,
         backgroundSize: "cover",
@@ -16,7 +45,7 @@ export default function About() {
         color: "#ffffff",
         borderBottom: "3px solid #d4af37"
       }}>
-        <h1 style={{ fontSize: "3rem", fontWeight: "800", marginBottom: "15px", letterSpacing: "1px", color: "#ffffff" }}>
+        <h1 className="about-title-responsive" style={{ fontSize: "3rem", fontWeight: "800", marginBottom: "15px", letterSpacing: "1px", color: "#ffffff" }}>
           About Urban City Lahore
         </h1>
         <p style={{ fontSize: "1.25rem", maxWidth: "750px", margin: "0 auto", opacity: "0.9", lineHeight: "1.6", color: "#e2e8f0" }}>
@@ -27,7 +56,7 @@ export default function About() {
         <div style={{
           display: "flex",
           justifyContent: "center",
-          gap: "30px",
+          gap: "20px",
           flexWrap: "wrap",
           marginTop: "45px"
         }}>
@@ -39,7 +68,7 @@ export default function About() {
             <div key={idx} style={{
               background: "rgba(26, 28, 35, 0.8)",
               border: "1px solid rgba(212, 175, 55, 0.4)",
-              padding: "15px 30px",
+              padding: "15px 25px",
               borderRadius: "30px",
               boxShadow: "0 8px 20px rgba(0,0,0,0.3)"
             }}>
@@ -53,7 +82,7 @@ export default function About() {
       {/* 2. Main Vision & Content Section (Side-by-Side Grid) */}
       <section style={{ maxWidth: "1150px", margin: "60px auto 0", padding: "0 20px" }}>
         
-        <div style={{
+        <div className="vision-grid-responsive" style={{
           display: "grid",
           gridTemplateColumns: "1.1fr 0.9fr",
           gap: "40px",
@@ -91,7 +120,7 @@ export default function About() {
         
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "30px",
           marginBottom: "60px"
         }}>
@@ -102,7 +131,6 @@ export default function About() {
             padding: "35px 30px",
             borderRadius: "16px",
             boxShadow: "0 10px 25px rgba(0, 0, 0, 0.06)",
-            transition: "transform 0.3s ease, box-shadow 0.3s ease",
             borderTop: "4px solid #d4af37",
             border: "1px solid #eee"
           }}>
@@ -118,7 +146,6 @@ export default function About() {
             padding: "35px 30px",
             borderRadius: "16px",
             boxShadow: "0 10px 25px rgba(0, 0, 0, 0.06)",
-            transition: "transform 0.3s ease, box-shadow 0.3s ease",
             borderTop: "4px solid #d4af37",
             border: "1px solid #eee"
           }}>
@@ -134,7 +161,6 @@ export default function About() {
             padding: "35px 30px",
             borderRadius: "16px",
             boxShadow: "0 10px 25px rgba(0, 0, 0, 0.06)",
-            transition: "transform 0.3s ease, box-shadow 0.3s ease",
             borderTop: "4px solid #d4af37",
             border: "1px solid #eee"
           }}>
@@ -163,9 +189,10 @@ export default function About() {
           <p style={{ fontSize: "1.1rem", color: "#cbd5e1", maxWidth: "650px", margin: "0 auto 30px auto", lineHeight: "1.6" }}>
             Secure your residential or commercial plot today with flexible installment plans and guaranteed high returns.
           </p>
-          <div style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="cta-buttons-responsive" style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap" }}>
             <Link 
               to="/payment-plan" 
+              className="cta-btn-responsive"
               style={{
                 display: "inline-block",
                 padding: "14px 30px",
@@ -183,6 +210,7 @@ export default function About() {
             </Link>
             <Link 
               to="/contact" 
+              className="cta-btn-responsive"
               style={{
                 display: "inline-block",
                 padding: "14px 30px",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Booking.css";
+import "./booking.css";
 
 export default function Booking() {
   const [submitted, setSubmitted] = useState(false);

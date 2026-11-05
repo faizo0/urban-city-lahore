@@ -64,6 +64,11 @@ const stats = [
 export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 
+  const handleCardClick = (f) => {
+    setActiveModal(f);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // کارڈ کلک ہوتے ہی پیج اوپر سکول ہو جائے گا
+  };
+
   const handleImageError = (e) => {
     e.target.onerror = null;
     e.target.src = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80";
@@ -108,7 +113,7 @@ export default function Home() {
             {features.map((f) => (
               <article
                 key={f.id}
-                onClick={() => setActiveModal(f)}
+                onClick={() => handleCardClick(f)}
                 className="feature-card"
               >
                 {/* Card Image Box */}
